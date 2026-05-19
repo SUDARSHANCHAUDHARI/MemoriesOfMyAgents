@@ -3,7 +3,6 @@
 Compression pipeline — runs at session end (triggered by stop.py).
 One LLM call per session. Full context. Not per tool call.
 
-Improvements over agentmemory:
 - Privacy filtering: secrets stripped before LLM sees observations
 - Citation provenance: source_observation_ids tracked per memory
 - Circuit breaker: retry with exponential backoff, API-key-less fallback
