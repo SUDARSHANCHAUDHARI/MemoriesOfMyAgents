@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memoriesofmyagents"
+version = "1.0.0"
+description = "Local-first persistent memory for AI coding agents. Direct file writes, zero server in capture path."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "SudarshanTechLabs", email = "sunny.sudarshan@gmail.com" }]
+keywords = ["ai", "agents", "memory", "mcp", "claude", "cursor", "llm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+]
+
+# Core moma library has zero required dependencies — all stdlib.
+# mcp is optional: only needed when running the MCP server.
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.0.0"]
+all = ["mcp>=1.0.0"]
+
+[project.scripts]
+moma-server = "mcp_server.server:run"
+
+[project.urls]
+Homepage = "https://github.com/SUDARSHANCHAUDHARI/MemoriesOfMyAgents"
+Repository = "https://github.com/SUDARSHANCHAUDHARI/MemoriesOfMyAgents"
+Issues = "https://github.com/SUDARSHANCHAUDHARI/MemoriesOfMyAgents/issues"
+
+[tool.setuptools.packages.find]
+include = ["moma*", "mcp_server*", "scripts*"]

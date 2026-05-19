@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "moma": {
+      "command": "REPLACE_WITH_VENV_PYTHON",
+      "args": ["REPLACE_WITH_PROJECT_PATH/mcp_server/server.py"],
+      "env": {
+        "ANTHROPIC_API_KEY": "REPLACE_WITH_YOUR_KEY"
+      }
+    }
+  }
+}

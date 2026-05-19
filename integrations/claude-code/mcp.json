@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "moma": {
+      "command": "/path/to/MemoriesOfMyAgents/.venv/bin/python3",
+      "args": ["/path/to/MemoriesOfMyAgents/mcp/server.py"],
+      "env": {
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}"
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+
+# Node / Next.js
+node_modules/
+.next/
+dashboard/.next/
+dashboard/node_modules/
+pnpm-lock.yaml
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+local.properties
+keystore.properties
+
+# Personal moma data — never commit your memories
+~/.moma/
+
+# Claude Code local settings (may contain personal paths/tokens)
+.claude/
+
+# Build output
+dist/
+build/
+*.egg-info/
+
+# Internal planning docs — not for public repos
+PLAN.md
+PLAN_*.md
+AGENT_MEMORY_PLAN.md
+SPEC_*.md
+
+# Secrets (belt-and-suspenders)
+secrets.*
+credentials.*
+.claude-plugin-config.json
+
+# Logs
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

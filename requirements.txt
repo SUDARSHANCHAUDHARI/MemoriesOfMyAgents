@@ -1,0 +1,9 @@
+# MemoriesOfMyAgents — Python dependencies
+# Core library (moma/) and hooks require no third-party packages.
+# Only the MCP server needs the mcp package.
+
+# MCP server only
+mcp>=1.0.0
+
+# The compression pipeline uses the Anthropic API via urllib (stdlib) — no SDK needed.
+# anthropic>=0.40.0  # uncomment if you prefer the Anthropic SDK over urllib
