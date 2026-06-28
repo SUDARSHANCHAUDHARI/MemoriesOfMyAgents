@@ -3,6 +3,10 @@
 > Local-first persistent memory for AI coding agents.
 > Direct file writes. Zero server in capture path. Zero silent failures.
 
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![MCP](https://img.shields.io/badge/MCP-39%20tools-7c3aed.svg)](#mcp-tools-39)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 ---
 
 ## What it does
@@ -359,4 +363,4 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-Built by [SudarshanTechLabs](https://github.com/SUDARSHANCHAUDHARI)
+Built by **Sudarshan Chaudhari** — SudarshanTechLabs. [@SUDARSHANCHAUDHARI](https://github.com/SUDARSHANCHAUDHARI)
