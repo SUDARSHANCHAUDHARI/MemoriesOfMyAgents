@@ -12,8 +12,17 @@ export async function GET(
   { params }: { params: Promise<{ session_id: string }> }
 ) {
   const { session_id } = await params
+  // Reject anything that isn't a plain id — blocks path traversal (../, encoded slashes, null bytes).
+  if (!/^[A-Za-z0-9_-]+$/.test(session_id)) {
+    return Response.json({ error: "Invalid session id" }, { status: 400 })
+  }
   const rawPath = path.join(MOMA_ROOT, "raw", `${session_id}.jsonl`)
   const sessionPath = path.join(MOMA_ROOT, "sessions", `${session_id}.json`)
+  // Defense in depth: ensure resolved paths stay within MOMA_ROOT.
+  const root = path.resolve(MOMA_ROOT)
+  if (!path.resolve(rawPath).startsWith(root + path.sep) || !path.resolve(sessionPath).startsWith(root + path.sep)) {
+    return Response.json({ error: "Invalid session id" }, { status: 400 })
+  }
 
   const observations: unknown[] = []
   if (fs.existsSync(rawPath)) {
