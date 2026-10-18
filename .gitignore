@@ -55,3 +55,6 @@ credentials.*
 .vscode/
 *.swp
 *.swo
+
+# repoguard scan output
+repoguard-results/
